@@ -1,6 +1,4 @@
-# Causal-Aware ML Framework
-## Counterfactual Explainability and Adaptive Thresholding for Rare Disease Risk Prediction
-
+# Causal-Aware Machine Learning Framework with Counterfactual Explainability and Adaptive Thresholding for Rare Disease Risk Prediction
 This project is a complete machine learning pipeline for rare disease risk prediction with a focus on clinical usefulness, not just raw classification accuracy. It combines data preprocessing, model training, adaptive thresholding, SHAP explainability, counterfactual recommendations, causal inference, and a Streamlit dashboard.
 
 ## What This Project Does
