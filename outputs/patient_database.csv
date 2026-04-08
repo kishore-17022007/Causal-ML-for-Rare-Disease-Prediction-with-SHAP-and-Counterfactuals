@@ -1,0 +1,3 @@
+patient_id,name,age,gender,date_registered,last_prediction,last_probability,last_decision,num_predictions,avg_probability,highest_probability,status
+PAT_20260408153624,PAT_20260408153624,50,0,2026-04-08 15:36:24,2026-04-08 15:36:24,0.0082,✅  LOW RISK,1,0.0082,0.0082,active
+PAT_20260408153723,PAT_20260408153723,50,0,2026-04-08 15:37:23,2026-04-08 15:37:23,0.0082,✅  LOW RISK,1,0.0082,0.0082,active

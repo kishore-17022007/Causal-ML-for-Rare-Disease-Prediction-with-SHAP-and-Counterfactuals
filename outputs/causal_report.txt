@@ -1,0 +1,33 @@
+CAUSAL ANALYSIS REPORT
+======================
+
+Method: DoWhy backdoor.linear_regression (or logistic-regression ATE fallback)
+
+Causal ATE represents the *direct* effect of each treatment variable
+on disease_risk after controlling for confounders (age, gender, family_history).
+
+Interpretation:
+  Positive ATE → treatment increases disease risk
+  Negative ATE → treatment decreases disease risk
+
+                   correlation_rank  |correlation|  causal_ATE
+feature                                                       
+smoking                           6         0.2312      0.6196
+physical_activity                 2         0.5223     -4.4681
+cholesterol                       1         0.5299      2.1285
+glucose                           3         0.4648      1.6631
+systolic_bp                       4         0.4161      1.5947
+bmi                               5         0.3565      1.1011
+
+────────────────────────────────────────────────────────────
+Key Causal Insights:
+  • physical_activity         ATE=-4.4681  → ↓ decreases disease risk
+  • cholesterol               ATE=+2.1285  → ↑ increases disease risk
+  • glucose                   ATE=+1.6631  → ↑ increases disease risk
+  • systolic_bp               ATE=+1.5947  → ↑ increases disease risk
+  • bmi                       ATE=+1.1011  → ↑ increases disease risk
+  • smoking                   ATE=+0.6196  → ↑ increases disease risk
+
+────────────────────────────────────────────────────────────
+DISCLAIMER: Causal estimates are approximate and depend on the assumed
+causal graph. Consult domain experts before making clinical decisions.

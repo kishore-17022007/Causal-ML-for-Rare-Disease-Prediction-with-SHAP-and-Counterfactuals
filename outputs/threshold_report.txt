@@ -1,0 +1,15 @@
+ADAPTIVE THRESHOLD REPORT
+=========================
+Strategy          : fbeta
+Beta              : 2.0
+Optimal Threshold : 0.5068
+
+Confusion Matrix  :
+  TP=62  FP=44
+  FN=10  TN=484
+
+Recall            : 0.8611
+Precision         : 0.5849
+F1                : 0.6966
+F-beta            : 0.7868
+False Negatives   : 10  ← missed diagnoses (want LOW)

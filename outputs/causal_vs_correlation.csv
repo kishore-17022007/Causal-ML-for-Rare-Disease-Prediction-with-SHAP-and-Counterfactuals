@@ -1,0 +1,7 @@
+feature,correlation_rank,|correlation|,causal_ATE
+smoking,6,0.2312,0.6196
+physical_activity,2,0.5223,-4.4681
+cholesterol,1,0.5299,2.1285
+glucose,3,0.4648,1.6631
+systolic_bp,4,0.4161,1.5947
+bmi,5,0.3565,1.1011

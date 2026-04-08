@@ -1,0 +1,21 @@
+COUNTERFACTUAL RECOMMENDATIONS REPORT
+==================================================
+
+Patient 1
+  Original risk probability : 75.0%
+  Recommended changes:
+    • Reduce cholesterol levels
+    • Increase physical activity
+    • Quit smoking if applicable
+
+Patient 2
+  Original risk probability : 75.0%
+  Recommended changes:
+    • Reduce cholesterol levels
+    • Increase physical activity
+    • Quit smoking if applicable
+
+──────────────────────────────────────────────────
+DISCLAIMER: These are model-generated suggestions only.
+All clinical decisions must be made by qualified healthcare
+professionals. This system is NOT a diagnostic tool.
