@@ -68,24 +68,6 @@ These plots are already generated in the repository and will render directly on 
 
 ![Local SHAP Explanation](outputs/shap_local_patient1.png)
 
-## Project Structure
-
-```text
-rare_disease_ml/
-├── main.py                  # Entry point for the full pipeline
-├── data_generator.py        # Data loading, normalization, preprocessing
-├── model_training.py        # Model fitting and evaluation
-├── threshold_optimizer.py   # Adaptive threshold selection
-├── explainability.py        # SHAP-based explanations
-├── counterfactuals.py       # Counterfactual generation
-├── causal_analysis.py       # Causal inference and correlation comparison
-├── visualizations.py        # ROC, SHAP, threshold, and comparison plots
-├── predictor.py             # Patient-level inference helper
-├── app.py                   # Streamlit dashboard
-├── requirements.txt
-├── data/
-└── outputs/
-```
 
 ## Pipeline Overview
 
@@ -136,60 +118,6 @@ rare_disease_ml/
 - Uses DoWhy when available.
 - Falls back to regression-based approximate average treatment effect estimates.
 - Compares causal estimates with Pearson correlation.
-
-## Generated Outputs
-
-| File | Description |
-|------|-------------|
-| `outputs/trained_models.pkl` | Saved model dictionary |
-| `outputs/trained_preprocessor.pkl` | Saved preprocessing pipeline |
-| `outputs/evaluation_summary.csv` | Accuracy, precision, recall, F1, ROC AUC |
-| `outputs/threshold_sweep.csv` | Per-threshold metrics |
-| `outputs/threshold_report.txt` | Selected threshold and confusion matrix summary |
-| `outputs/shap_values.csv` | SHAP values matrix |
-| `outputs/shap_summary_bar.png` | Global SHAP feature ranking |
-| `outputs/shap_summary_beeswarm.png` | SHAP distribution plot |
-| `outputs/shap_local_patient{N}.png` | Local patient explanation plots |
-| `outputs/roc_curves.png` | ROC curves for all models |
-| `outputs/confusion_matrices.png` | Default vs adaptive threshold comparison |
-| `outputs/threshold_sweep.png` | Precision and recall across thresholds |
-| `outputs/feature_importance_comparison.png` | RF importance vs SHAP comparison |
-| `outputs/counterfactual_report.txt` | Counterfactual recommendations |
-| `outputs/causal_report.txt` | Causal analysis report |
-| `outputs/causal_vs_correlation.csv` | Correlation vs causal effect table |
-| `outputs/patient_prediction_report.txt` | Individual prediction summary |
-
-## Quick Start
-
-### Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Add the dataset
-
-Place the Kaggle CSV at:
-
-```text
-data/kaggle_data.csv
-```
-
-Supported binary target column names include `disease_risk`, `target`, `label`, `outcome`, `class`, `diagnosis`, and `has_disease`.
-
-### Run the full pipeline
-
-```bash
-python main.py
-```
-
-This will train the models, evaluate them, tune the operating threshold, generate SHAP explanations, create counterfactuals, run causal analysis, and save all outputs.
-
-### Launch the dashboard
-
-```bash
-streamlit run app.py
-```
 
 ## Sample Patient Report
 
